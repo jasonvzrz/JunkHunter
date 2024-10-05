@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqi01acmoit8a"]
+
+[ext_resource type="PackedScene" uid="uid://cfhu6ce3yk0re" path="res://scenes/planet.tscn" id="1_g8xst"]
+[ext_resource type="Texture2D" uid="uid://b4dj28egqtxmo" path="res://assets/Space Background 2.png" id="2_wfyjj"]
+[ext_resource type="PackedScene" uid="uid://dwgku2l4y1y0r" path="res://scenes/character.tscn" id="3_8vgh2"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+drag_vertical_enabled = true
+
+[node name="SpaceBackground2" type="Sprite2D" parent="."]
+position = Vector2(-1, 2)
+scale = Vector2(2.29, 2.29)
+texture = ExtResource("2_wfyjj")
+
+[node name="Planet" parent="." instance=ExtResource("1_g8xst")]
+position = Vector2(3, -1)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_8vgh2")]
+position = Vector2(16, -180)
